@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-const StackedCard = ({ imageSrc, title, description, icon }) => (
+const StackedCard = ({ imageSrc, title, description, icon, link }) => (
     <div className="w-full md:w-1/2 lg:w-1/3 px-4 py-16">
         <div className="relative group">
             <div className="rounded-xl overflow-hidden shadow-lg">
@@ -27,9 +28,12 @@ const StackedCard = ({ imageSrc, title, description, icon }) => (
                 <p className="text-gray-600 mb-4 text-sm">
                     {description}
                 </p>
-                <button className="text-blue-500 text-lg font-semibold text-center hover:text-blue-400 transition duration-300">
-                    Read More
-                </button>
+                <Link href={link}>
+                    <button
+                        className="text-blue-500 text-lg font-semibold text-center hover:text-blue-400 transition duration-300">
+                        Read More
+                    </button>
+                </Link>
             </div>
         </div>
     </div>
@@ -37,12 +41,12 @@ const StackedCard = ({ imageSrc, title, description, icon }) => (
 
 const StackedCards = () => {
     const cardData = [
-        { imageSrc: "/assets/image2.webp", title: "Appliance Installation", description: "Expert setup and connection of your new household appliances for optimal performance and safety.", icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg> },
-        { imageSrc: "/assets/image8.webp", title: "Bulb Installation", description: "Swift and secure replacement of all types of light bulbs, ensuring proper illumination throughout your home.", icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> },
-        { imageSrc: "/assets/image4.webp", title: "TV Mounting", description: "Professional wall mounting of your television for the perfect viewing angle and clean, cable-free appearance.", icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg> },
-        { imageSrc: "/assets/image5.webp", title: "Furniture Assembly", description: "Efficient and precise assembly of flat-pack furniture, saving you time and ensuring stability.", icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg> },
-        { imageSrc: "/assets/image6.webp", title: "Drywall Repair", description: "Seamless patching and refinishing of damaged walls to restore your room's pristine look.", icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg> },
-        { imageSrc: "/assets/image7.webp", title: "HVAC Repair", description: "Comprehensive diagnosis and repair of heating, ventilation, and air conditioning systems to keep your home comfortable year-round.", icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> },
+        { imageSrc: "/assets/image2.webp", title: "Appliance Installation", description: "Expert setup and connection of your new household appliances for optimal performance and safety.", icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>, link: "/services/appliance-installation" },
+        { imageSrc: "/assets/image8.webp", title: "Bulb Installation", description: "Swift and secure replacement of all types of light bulbs, ensuring proper illumination throughout your home.", icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>, link: "/services/bulb-installation" },
+        { imageSrc: "/assets/image4.webp", title: "TV Mounting", description: "Professional wall mounting of your television for the perfect viewing angle and clean, cable-free appearance.", icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>, link: "/services/tv-mounting" },
+        { imageSrc: "/assets/image5.webp", title: "Furniture Assembly", description: "Efficient and precise assembly of flat-pack furniture, saving you time and ensuring stability.", icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>, link: "/services/furniture-assembly" },
+        { imageSrc: "/assets/image6.webp", title: "Drywall Repair", description: "Seamless patching and refinishing of damaged walls to restore your room's pristine look.", icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>, link: "/services/drywall-repair" },
+        { imageSrc: "/assets/image7.webp", title: "HVAC Repair", description: "Comprehensive diagnosis and repair of heating, ventilation, and air conditioning systems to keep your home comfortable year-round.", icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>, link: "/services/hvac-repair" },
     ];
 
     return (

@@ -25,7 +25,7 @@ const Testimonials = () => {
         }, 5000); 
 
         return () => clearInterval(timer);
-    }, []);
+    }, [reviews.length]);
 
     return (
         <section className="bg-white px-6 py-24 sm:py-32 lg:px-8">
@@ -49,7 +49,7 @@ const Testimonials = () => {
                             }`}
                         >
                             <blockquote className="text-xl font-medium leading-8 tracking-tight text-gray-900 sm:text-2xl sm:leading-9">
-                                <p>"{review.text}"</p>
+                                <p>{review.text}</p>
                             </blockquote>
                             <figcaption className="mt-10 flex items-center justify-center">
                                 <div className="text-sm leading-6">

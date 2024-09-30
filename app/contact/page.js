@@ -14,7 +14,7 @@ const CoverPhoto = () => (
       <div className="absolute inset-0 bg-black opacity-80"></div>
       <div className="absolute inset-0 flex items-center justify-center">
         <h1 className="text-4xl lg:text-7xl font-bold text-white text-center z-10 drop-shadow-lg">
-          Let's Connect
+          {`Let's Connect`}
         </h1>
       </div>
       <div className="absolute -bottom-1 left-0 right-0">
@@ -67,7 +67,7 @@ const CoverPhoto = () => (
             <h3 className="arima text-lg font-semibold mb-2">Phone</h3>
             <div className="flex items-center">
               <Phone className="w-5 h-5 text-blue-400 mr-2" />
-              <a href="tel:+1234567890" className="raleway text-sm">(123) 456-7890</a>
+              <a href="tel:+1234567890" className="raleway text-sm">{`(123) 456-7890`}</a>
             </div>
           </div>
           <div>
@@ -81,7 +81,7 @@ const CoverPhoto = () => (
             <h3 className="arima text-lg font-semibold mb-2">Location</h3>
             <div className="flex items-center">
               <MapPin className="w-5 h-5 text-blue-400 mr-2" />
-              <span className="raleway text-sm">Madison, WI</span>
+              <span className="raleway text-sm">{`Madison, WI`}</span>
             </div>
           </div>
         </div>

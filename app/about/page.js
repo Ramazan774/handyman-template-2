@@ -32,9 +32,9 @@ const CoverPhoto = () => (
           <div className="w-full lg:w-1/2 lg:pr-16 lg:pt-8">
             <div className="relative isolate">
               <div className="arima text-lg font-medium leading-8 text-gray-900 sm:text-xl sm:leading-9">
-                <p>Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh scelerisque bibendum.</p>
-                <p className="mt-4">Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh scelerisque bibendum.</p>
-                <p className="mt-4">Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh scelerisque bibendum.</p>
+                <p>{`Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh scelerisque bibendum.`}</p>
+                <p className="mt-4">{`Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh scelerisque bibendum.`}</p>
+                <p className="mt-4">{`Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh scelerisque bibendum.`}</p>
               </div>
               <div className="mt-8 text-base">
                 <Link href="/contact" className="arima inline-block px-6 py-2 border border-blue-800 text-white bg-blue-700 hover:bg-blue-900 rounded-2xl transition duration-300 text-center">
@@ -66,13 +66,13 @@ const CoverPhoto = () => (
           <div>
             <h2 className="arima text-3xl font-bold text-gray-900 sm:text-4xl mb-4">Our Mission</h2>
             <p className="arima mt-4 text-lg text-gray-600">
-              Our mission is to provide top-quality handyman services that exceed our customers' expectations. We strive to deliver reliable, efficient, and professional solutions for all your home improvement needs.
+              {`Our mission is to provide top-quality handyman services that exceed our customers' expectations. We strive to deliver reliable, efficient, and professional solutions for all your home improvement needs.`}
             </p>
           </div>
           <div>
             <h2 className="arima text-3xl font-bold text-gray-900 sm:text-4xl mb-4">Our Vision</h2>
             <p className="arima mt-4 text-lg text-gray-600">
-              We envision being the go-to handyman service in our community, known for our expertise, integrity, and commitment to customer satisfaction. We aim to build lasting relationships with our clients through trust and excellence in every job we undertake.
+              {`We envision being the go-to handyman service in our community, known for our expertise, integrity, and commitment to customer satisfaction. We aim to build lasting relationships with our clients through trust and excellence in every job we undertake.`}
             </p>
           </div>
         </div>
