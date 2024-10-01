@@ -48,7 +48,7 @@ const ArrowButton = ({ direction, onClick }) => (
   };
 
 const CoverPhoto = () => (
-    <div className="relative h-80 lg:h-96 mt-32 lg:mt-52">
+    <div className="relative h-80 lg:h-96 mt-8 lg:mt-16">
       <Image
         src="/assets/image11.webp"
         alt="Cover photo"
@@ -101,7 +101,7 @@ const CoverPhoto = () => (
     }, [images.length]);
   
     return (
-      <div className="bg-white">
+      <div className="bg-white oswald">
         <CoverPhoto />
         <div className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">

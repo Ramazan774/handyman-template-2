@@ -128,7 +128,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-        <div className="mt-12 text-center">
+        <div className="oswald mt-12 text-center">
           <Link href="/gallery" className="arima inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-2xl shadow-sm text-white bg-blue-500 hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900 transition-colors duration-200">
             View Full Gallery
           </Link>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import CTASection from '@/components/CTASection';
 
 const CoverPhoto = () => (
-    <div className="relative h-80 lg:h-96 mt-32 lg:mt-52">
+    <div className="relative h-80 lg:h-96 mt-8 lg:mt-16">
       <Image
         src="/assets/image11.webp"
         alt="Cover photo"
@@ -61,7 +61,7 @@ const CoverPhoto = () => (
 
 const TVMounting = () => {
     return (
-        <div>
+        <div className="oswald">
             <CoverPhoto />
             <MainSection />
             <CTASection />

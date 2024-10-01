@@ -37,7 +37,7 @@ const FeatureSection = () => {
 
   return (
     <div className="bg-blue-500 text-white py-12 sm:py-16 lg:py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="roboto container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="arima text-sm sm:text-base mb-2 sm:mb-4">Our Features</h1>
         <h2 className="arima text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6">Why Choose Us</h2>
         <p className="raleway text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto">

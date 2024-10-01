@@ -50,7 +50,7 @@ const StackedCards = () => {
     ];
 
     return (
-        <div className="container mx-auto px-4 py-12">
+        <div className="oswald container mx-auto px-4 py-12">
             <h2 className="text-center text-sm font-semibold text-blue-800 mb-4">Our Services</h2>
             <h1 className='text-center text-4xl font-bold text-black mb-4'>Comprehensive Handyman Services</h1>
             <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">

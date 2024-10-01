@@ -4,7 +4,7 @@ const CTASection = () => {
     return (
         <section className="relative container mx-auto bg-center bg-cover py-24 mb-6" style={{ backgroundImage: "url('/assets/ctaimage.webp')" }}>
             <div className="absolute inset-0 bg-black opacity-60"></div>
-            <div className="relative z-10">
+            <div className="oswald relative z-10">
                 <div className="flex flex-col md:flex-row items-center justify-between">
                     <div className="md:w-1/2 mb-8 md:mb-0 px-4">
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">

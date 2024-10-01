@@ -14,8 +14,8 @@ const AboutSection = () => {
               className="w-full h-[300px] lg:h-[600px] object-fill rounded-2xl"
             />
           </div>
-          <div className="lg:w-1/2 lg:pl-8">
-          <h1 className="text-sm text-blue-500 text-center font-semibold capitalize">Who We Are</h1>
+          <div className="oswald lg:w-1/2 lg:pl-8">
+            <h1 className="text-sm text-blue-500 text-center font-semibold capitalize">Who We Are</h1>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">Expert Handyman Services</h2>
             <p className="mt-6 text-xl leading-8 text-gray-600">
               {`Our team of skilled professionals is dedicated to providing top-notch handyman services for all your home improvement needs. From minor repairs to major renovations, we've got you covered.`}

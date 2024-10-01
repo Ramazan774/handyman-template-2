@@ -1,8 +1,21 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Roboto, Oswald } from 'next/font/google';
 import Topbar from '../components/Topbar';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: '300',
+  variable: '--font-roboto',
+})
+
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: '300',
+  variable: '--font-oswald'
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${roboto.variable} ${oswald.variable}`}>
       <body className="flex min-h-screen flex-col bg-white">
         <Topbar />
         <Navbar />

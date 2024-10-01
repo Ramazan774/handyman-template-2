@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [isServicesHovered, setIsServicesHovered] = useState(false);
-  const [topbarHeight, setTopbarHeight] = useState(0);
+  const [topbarHeight, setTopbarHeight] = useState();
   const pathname = usePathname();
 
   useEffect(() => {
@@ -37,11 +37,11 @@ const Navbar = () => {
   const isMobileActive = (href) => pathname === href ? 'text-blue-500' : 'text-black';
 
   return (
-    <nav className="bg-blue-500 shadow-lg fixed top-0 left-0 right-0 z-40" style={{ top: `${topbarHeight}px` }}>
+    <nav className="bg-blue-500 shadow-lg fixed top-16 left-0 right-0 z-40" style={{ top: `${topbarHeight}px` }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-12 sm:h-16">
           <div className="hidden lg:flex justify-center flex-1 items-center">
-            <div className="arima flex space-x-4 lg:space-x-8">
+            <div className="oswald flex space-x-4 lg:space-x-8">
               <Link href="/" className={`${isActive('/')} font-medium px-2 py-1 text-sm lg:text-lg`}>
                 Home
               </Link>
@@ -119,11 +119,11 @@ const Navbar = () => {
           </button>
         </div>
         <div className="px-2 pt-2 pb-3 space-y-4">
-          <Link href="/" className={`block font-medium px-3 py-4 text-4xl ${isMobileActive('/')}`} onClick={closeMenu}>Home</Link>
-          <Link href="/about" className={`block font-medium px-3 py-4 text-4xl ${isMobileActive('/about')}`} onClick={closeMenu}>About Us</Link>
+          <Link href="/" className={`block font-medium px-3 py-4 text-2xl ${isMobileActive('/')}`} onClick={closeMenu}>Home</Link>
+          <Link href="/about" className={`block font-medium px-3 py-4 text-2xl ${isMobileActive('/about')}`} onClick={closeMenu}>About Us</Link>
           <button
             onClick={toggleServices}
-            className={`w-full text-left font-medium px-3 py-4 text-4xl focus:outline-none flex items-center justify-between ${pathname.startsWith('/services') ? 'text-blue-500' : 'text-black'}`}
+            className={`w-full text-left font-medium px-3 py-4 text-2xl focus:outline-none flex items-center justify-between ${pathname.startsWith('/services') ? 'text-blue-500' : 'text-black'}`}
           >
             Services
             <svg
@@ -138,16 +138,16 @@ const Navbar = () => {
           </button>
           {servicesOpen && (
             <div className="pl-6 space-y-2 bg-white shadow-md rounded-md">
-              <Link href="/services/appliance-installation" className={`block px-3 py-2 text-2xl ${isMobileActive('/services/appliance-installation')}`} onClick={closeMenu}>Appliance Installation</Link>
-              <Link href="/services/bulb-installation" className={`block px-3 py-2 text-2xl ${isMobileActive('/services/bulb-installation')}`} onClick={closeMenu}>Bulb Installation</Link>
-              <Link href="/services/tv-mounting" className={`block px-3 py-2 text-2xl ${isMobileActive('/services/tv-mounting')}`} onClick={closeMenu}>TV Mounting</Link>
-              <Link href="/services/furniture-assembly" className={`block px-3 py-2 text-2xl ${isMobileActive('/services/furniture-assembly')}`} onClick={closeMenu}>Furniture Assembly</Link>
-              <Link href="/services/drywall-repair" className={`block px-3 py-2 text-2xl ${isMobileActive('/services/drywall-repair')}`} onClick={closeMenu}>Drywall Repair</Link>
-              <Link href="/services/hvac-repair" className={`block px-3 py-2 text-2xl ${isMobileActive('/services/hvac-repair')}`} onClick={closeMenu}>HVAC Repair</Link>
+              <Link href="/services/appliance-installation" className={`block px-3 py-2 text-lg ${isMobileActive('/services/appliance-installation')}`} onClick={closeMenu}>Appliance Installation</Link>
+              <Link href="/services/bulb-installation" className={`block px-3 py-2 text-lg ${isMobileActive('/services/bulb-installation')}`} onClick={closeMenu}>Bulb Installation</Link>
+              <Link href="/services/tv-mounting" className={`block px-3 py-2 text-lg ${isMobileActive('/services/tv-mounting')}`} onClick={closeMenu}>TV Mounting</Link>
+              <Link href="/services/furniture-assembly" className={`block px-3 py-2 text-lg ${isMobileActive('/services/furniture-assembly')}`} onClick={closeMenu}>Furniture Assembly</Link>
+              <Link href="/services/drywall-repair" className={`block px-3 py-2 text-lg ${isMobileActive('/services/drywall-repair')}`} onClick={closeMenu}>Drywall Repair</Link>
+              <Link href="/services/hvac-repair" className={`block px-3 py-2 text-lg ${isMobileActive('/services/hvac-repair')}`} onClick={closeMenu}>HVAC Repair</Link>
             </div>
           )}
-          <Link href="/gallery" className={`block font-medium px-3 py-4 text-4xl ${isMobileActive('/gallery')}`} onClick={closeMenu}>Gallery</Link>
-          <Link href="/contact" className={`block font-medium px-3 py-4 text-4xl ${isMobileActive('/contact')}`} onClick={closeMenu}>Contact</Link>
+          <Link href="/gallery" className={`block font-medium px-3 py-4 text-2xl ${isMobileActive('/gallery')}`} onClick={closeMenu}>Gallery</Link>
+          <Link href="/contact" className={`block font-medium px-3 py-4 text-2xl ${isMobileActive('/contact')}`} onClick={closeMenu}>Contact</Link>
         </div>
       </div>
     </nav>

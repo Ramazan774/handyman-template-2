@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="bg-blue-500" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">Footer</h2>
-            <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+            <div className="oswald mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
                 <div className="xl:grid xl:grid-cols-3 xl:gap-8">
                 <div className="space-y-8">
                     <Image className="h-70" src="/assets/logo.webp" width={270} height={270} alt="Company name" />
@@ -31,16 +31,16 @@ const Footer = () => {
                             <h3 className="text-sm font-semibold leading-6 text-white">Quick Links</h3>
                             <ul role="list" className="mt-6 space-y-4">
                                 <li>
-                                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Home</a>
+                                    <a href="/" className="text-sm leading-6 text-gray-300 hover:text-white">Home</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Who We Are</a>
+                                    <a href="/about" className="text-sm leading-6 text-gray-300 hover:text-white">Who We Are</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Gallery</a>
+                                    <a href="/gallery" className="text-sm leading-6 text-gray-300 hover:text-white">Gallery</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Contact</a>
+                                    <a href="/contact" className="text-sm leading-6 text-gray-300 hover:text-white">Contact</a>
                                 </li>
                             </ul>
                         </div>
@@ -48,22 +48,22 @@ const Footer = () => {
                             <h3 className="text-sm font-semibold leading-6 text-white">Services</h3>
                             <ul role="list" className="mt-6 space-y-4">
                                 <li>
-                                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Appliance Installation</a>
+                                    <a href="/services/appliance-installation" className="text-sm leading-6 text-gray-300 hover:text-white">Appliance Installation</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Bulb Installation</a>
+                                    <a href="/services/bulb-installation" className="text-sm leading-6 text-gray-300 hover:text-white">Bulb Installation</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">TV Mounting</a>
+                                    <a href="/services/tv-mounting" className="text-sm leading-6 text-gray-300 hover:text-white">TV Mounting</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Furniture Assembly</a>
+                                    <a href="/services/furniture-assembly" className="text-sm leading-6 text-gray-300 hover:text-white">Furniture Assembly</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Drywall Repair</a>
+                                    <a href="/services/drywall-repair" className="text-sm leading-6 text-gray-300 hover:text-white">Drywall Repair</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">HVAC Repair</a>
+                                    <a href="/services/hvac-repair" className="text-sm leading-6 text-gray-300 hover:text-white">HVAC Repair</a>
                                 </li>
                             </ul>
                         </div>
@@ -77,13 +77,13 @@ const Footer = () => {
                                 <svg className="h-6 w-6 mr-2 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                 </svg>
-                                <span className="text-sm leading-6 text-gray-300 hover:text-white">(123) 456-7890</span>
+                                <span><a href="tel:+1234567890" className="text-sm leading-6 text-gray-300 hover:text-white">(123) 456-7890</a></span>
                             </li>
                             <li className="flex items-center">
                                 <svg className="h-6 w-6 mr-2 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
-                                <span className="text-sm leading-6 text-gray-300 hover:text-white">info@example.com</span>
+                                <span><a href="mailto:info@example.com" className="text-sm leading-6 text-gray-300 hover:text-white">info@example.com</a></span>
                             </li>
                             <li className="flex items-center">
                                 <svg className="h-6 w-6 mr-2 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">

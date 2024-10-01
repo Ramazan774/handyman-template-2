@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CoverPhoto = () => (
-    <div className="relative h-80 lg:h-96 mt-32 lg:mt-52">
+    <div className="relative h-80 lg:h-96 mt-8 lg:mt-16">
       <Image
         src="/assets/image11.webp"
         alt="Cover photo"
@@ -37,7 +37,7 @@ const CoverPhoto = () => (
                 <p className="mt-4">{`Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh scelerisque bibendum.`}</p>
               </div>
               <div className="mt-8 text-base">
-                <Link href="/contact" className="arima inline-block px-6 py-2 border border-blue-800 text-white bg-blue-700 hover:bg-blue-900 rounded-2xl transition duration-300 text-center">
+                <Link href="/contact" className="arima inline-block px-6 py-2 border border-blue-800 text-white bg-blue-500 hover:bg-blue-400 rounded-2xl transition duration-300 text-center">
                   Get A Quote
                 </Link>
               </div>
@@ -82,7 +82,7 @@ const CoverPhoto = () => (
 
 const AboutPage = () => {
     return (
-        <div className="bg-white">
+        <div className="bg-white oswald">
             <CoverPhoto />
             <MainSection />
             <MissionVisionSection />

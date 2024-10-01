@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 
 const CoverPhoto = () => (
-    <div className="relative h-80 lg:h-96 mt-32 lg:mt-52">
+    <div className="relative h-80 lg:h-96 mt-8 lg:mt-16">
       <Image
         src="/assets/image11.webp"
         alt="Cover photo"
@@ -48,7 +48,7 @@ const CoverPhoto = () => (
               <textarea id="message" name="message" rows={4} placeholder="Enter Your Message" className="mt-1 block w-full rounded-md border-gray-300 border-2 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
             </div>
             <div>
-              <button type="submit" className="arima w-full bg-blue-700 px-4 py-2 text-sm font-medium rounded-md text-white shadow-sm hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+              <button type="submit" className="arima w-full bg-blue-500 px-4 py-2 text-sm font-medium rounded-md text-white shadow-sm hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                 Send
               </button>
             </div>
@@ -92,7 +92,7 @@ const CoverPhoto = () => (
 
   const ContactPage = () => {
     return (
-        <div className="bg-white">
+        <div className="bg-white oswald">
             <CoverPhoto />
             <ContactForm />
         </div>
