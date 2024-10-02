@@ -25,7 +25,7 @@ const Topbar = () => {
               alt="handyman company logo"
               width={150}
               height={150}
-              className="w-24 h-auto sm:w-40 md:w-48"
+              className="w-24 h-20 sm:w-40 md:w-48"
             />
           </Link>
         </div>

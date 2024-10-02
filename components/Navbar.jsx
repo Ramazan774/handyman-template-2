@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 
@@ -8,22 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [isServicesHovered, setIsServicesHovered] = useState(false);
-  const [topbarHeight, setTopbarHeight] = useState();
   const pathname = usePathname();
-
-  useEffect(() => {
-    const updateTopbarHeight = () => {
-      const topbar = document.getElementById('topbar');
-      if (topbar) {
-        setTopbarHeight(topbar.offsetHeight);
-      }
-    };
-
-    updateTopbarHeight();
-    window.addEventListener('resize', updateTopbarHeight);
-
-    return () => window.removeEventListener('resize', updateTopbarHeight);
-  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleServices = () => setServicesOpen(!servicesOpen);
@@ -37,7 +22,7 @@ const Navbar = () => {
   const isMobileActive = (href) => pathname === href ? 'text-blue-500' : 'text-black';
 
   return (
-    <nav className="bg-blue-500 shadow-lg fixed top-16 left-0 right-0 z-40" style={{ top: `${topbarHeight}px` }}>
+    <nav className="bg-blue-500 shadow-lg fixed top-[50px] left-0 right-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-12 sm:h-16">
           <div className="hidden lg:flex justify-center flex-1 items-center">
@@ -109,7 +94,7 @@ const Navbar = () => {
         className={`lg:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
-          style={{ top: `${topbarHeight}px` }}
+          style={{ top: '120px' }}
       >
         <div className="flex justify-end p-4">
           <button onClick={closeMenu} className="text-gray-500 hover:text-gray-700">
