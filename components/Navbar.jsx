@@ -22,7 +22,7 @@ const Navbar = () => {
   const isMobileActive = (href) => pathname === href ? 'text-blue-500' : 'text-black';
 
   return (
-    <nav className="bg-blue-500 shadow-lg fixed top-[50px] left-0 right-0 z-40">
+    <nav className="bg-blue-500 shadow-lg fixed top-[120px] left-0 right-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-12 sm:h-16">
           <div className="hidden lg:flex justify-center flex-1 items-center">
